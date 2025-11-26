@@ -46,9 +46,6 @@ const MovieDetail = () => {
       <MovieMeta type="credits"></MovieMeta>
       <MovieMeta type="videos"></MovieMeta>
       <MovieMeta type="similar"></MovieMeta>
-      {/* <MovieCredits></MovieCredits>
-      <MovieVideo></MovieVideo>
-      <MovieSimiliar></MovieSimiliar> */}
     </div>
   );
 };
@@ -138,79 +135,6 @@ function CastItem({ item }) {
   );
 }
 
-// function MovieCredits() {
-//   const { movieId } = useParams();
-//   const { data } = useSWR(tmdbAPI.getMovieMeta("credits", movieId), fetcher);
-//   const { cast } = data || {};
-//   if (!data) return <div>Loading...</div>;
-//   return (
-//     <div className="">
-//       <h2 className="mb-10 text-3xl text-center">Casts</h2>
-//       <div className="grid grid-cols-4 gap-5">
-//         {cast.slice(0, 4).map((item) => (
-//           <CastItem key={item.id} item={item}></CastItem>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
-// function MovieVideo() {
-//   const { movieId } = useParams();
-//   const { data } = useSWR(tmdbAPI.getMovieMeta("videos", movieId), fetcher);
-//   if (!data) return <div>Loading...</div>;
-//   const { results } = data || {};
-//   if (!results) return <div>Loading...</div>;
-//   return (
-//     <div className="py-10">
-//       <div className="flex flex-col items-center justify-center gap-10">
-//         {results.slice(0, 1).map((item) => (
-//           <div className="" key={item.id}>
-//             <h3 className="inline-block p-3 text-xl font-medium rounded-lg bg-secondary">
-//               {item.name}
-//             </h3>
-//             <div className="w-[1100px] aspect-video">
-//               <iframe
-//                 width="864"
-//                 height="486"
-//                 src={`https://www.youtube.com/embed/${item.key}`}
-//                 title="YouTube video player"
-//                 frameBorder="0"
-//                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-//                 allowFullScreen
-//                 className="object-fill w-full h-full rounded-lg"
-//               ></iframe>
-//             </div>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
-// function MovieSimiliar() {
-//   const { movieId } = useParams();
-//   const { data } = useSWR(tmdbAPI.getMovieMeta("similar", movieId), fetcher);
-//   if (!data) return <div>Loading...</div>;
-//   const { results: movies } = data || {};
-//   if (!movies) return <div>Loading...</div>;
-//   return (
-//     <div className="py-10">
-//       <h2 className="mb-10 text-3xl font-medium">Similar Movies</h2>
-//       <div className="movie-list">
-//         <Swiper grabCursor={"true"} slidesPerView={"auto"} spaceBetween={40}>
-//           {movies.length > 0 &&
-//             movies.map((item) => (
-//               <SwiperSlide key={item.id}>
-//                 <MovieCard item={item}></MovieCard>
-//               </SwiperSlide>
-//             ))}
-//         </Swiper>
-//       </div>
-//     </div>
-//   );
-// }
 
 export default MovieDetail;
 
-// <iframe width="914" height="514" src="https://www.youtube.com/embed/MbohuBUxcRU" title="Keanu Reeves Talks Voicing Shadow | Sonic 3 EXCLUSIVE Behind the Scenes | Paramount Movies" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

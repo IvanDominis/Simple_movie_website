@@ -2,10 +2,7 @@ import { Fragment, lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import Main from "components/layout/Main";
 import "swiper/scss";
-// import HomePage from "pages/HomePage";
-// import Banner from "components/banner/Banner";
-// import MoviePage from "pages/MoviePage";
-// import MovieDetail from "pages/MovieDetail";
+
 const HomePage = lazy(() => import("pages/HomePage"));
 const Banner = lazy(() => import("components/banner/Banner"));
 const MoviePage = lazy(() => import("pages/MoviePage2"));

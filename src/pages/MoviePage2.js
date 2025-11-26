@@ -98,18 +98,6 @@ const MoviePage = () => {
           Load More
         </Button>
       </div>
-      {/* <div className="mt-10">
-        <ReactPaginate
-          breakLabel="..."
-          nextLabel="next >"
-          onPageChange={handlePageClick}
-          pageRangeDisplayed={5}
-          pageCount={pageCount}
-          previousLabel="< previous"
-          renderOnZeroPageCount={null}
-          className="pagination"
-        />
-      </div> */}
     </div>
   );
 };
